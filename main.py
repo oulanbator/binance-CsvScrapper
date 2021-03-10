@@ -5,7 +5,11 @@ def get_timestamp():
     now = datetime.now()
     timestamp = datetime.timestamp(now)
     return timestamp
-    
+
+# Create "/data" dir if not existing one
+if not os.path.exists("data"):
+    os.makedirs("data")
+
 # Ask user for delay
 delay = int(input("Please enter delay betwen requests (seconds) : "))
 
